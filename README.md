@@ -4,12 +4,12 @@ Hey!  If you're reading this you're probably either looking through the ports
 to see what kind of stuff is already done, or you're looking for a guide on what
 ports are or you're just looking for a reference.
 
-In any case, this repo contains the ports that have been made for the `agnopm`
+In any case, this repo contains the ports that have been made for the `agno`
 package manager.
 
 ## Project structure
 
-One of the goals of `agnopm` is to be OS agnostic (assuming your OS is POSIX
+One of the goals of `agno` is to be OS agnostic (assuming your OS is POSIX
 compatible).  But not all of the software required to build is POSIX compatible.
 For example, there is `make` and `gmake` in OpenBSD, `gmake` being GNU's `make`.
 Some software you can't compile without `gmake` but you can with `make`.
