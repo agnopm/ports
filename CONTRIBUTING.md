@@ -14,8 +14,8 @@ interest to `agno`, but it is for the porter.  It goes like so:
 # URL:          http://softwares.website.url/goes/here
 # Maintainer:   Some Guy <his@email.com>
 # Packager:     Some Guy <his@email.com>
-# OS Depends:   comma, separated list of deps that can be found in the OS
-# agno Depends: comma, separated list of deps that are found in agno
+# OS Depends:   comma, separated, list, of, deps
+# agno Depends: comma, separated, list, of, deps
 ```
 
 In that order.  Not one above the other or something and none are omitted no
@@ -24,9 +24,9 @@ matter the case.  They must also be aligned, for readability's sake.
 ### Description
 
 This is pretty self explanatory.  Try to keep your description under 80
-characters if it's possible.  And whenever possible use the short description
-that the software is using, unless that's ridiculously long or it doesn't have
-one.
+characters if it's possible, as in the description line shouldn't be longer than
+80 characters.  And whenever possible use the short description that the
+software is using, unless it's ridiculously long or it doesn't have one.
 
 ### URL
 
@@ -130,16 +130,22 @@ agno_build() {
 
 	# buildin
 	./build.sh
-	# prefix should _always_ be / and the mandir should be /man
-	./configure --prefix=/ \
-		--mandir=/man
+	# prefix should _always_ be /usr and the mandir should be /usr/man
+	./configure --prefix=/usr \
+		--mandir=/usr/man
 }
 
 agno_install() {
+	# otherwise we're in the WORK dir, not in the package's source code dir
+	cd $name-$version
 	# installing, DESTDIR is conveniently labeled AGNO_DESTDIR :)
 	make DESTDIR=$AGNO_DESTDIR install
 }
 ```
+
+Please note that you should use exactly one tab, a real tab, not four or eight
+spaces or whatever.  You should only indent the body of the `agno_build()` and
+`agno_install()` functions.
 
 ### `agno_build()`
 
