@@ -8,18 +8,10 @@
 name=wmutils
 version=git
 release=1
-source=""
-gitsrc="https://github.com/wmutils/core"
+source="git://github.com/wmutils/core"
 
 agno_build() {
-	cd $AGNO_SOURCE
-
-	if cd $name; then
-		git fetch -q; git reset --hard origin/master
-	else
-		git clone $gitsrc $name
-		cd $name
-	fi
+	cd $name-git
 
 	make
 }

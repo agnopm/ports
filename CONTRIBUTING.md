@@ -101,7 +101,7 @@ using as the `version` string.  Remember to add `git` to the list of OS Depends.
 This usually stays at `1`, but this tells you what version of the current
 software version you are packaging.
 
-That is to say, if you make a port for version `0.2.2` and you push it,
+That is to say, if you make a port with version `0.2.2` and you push it,
 `release` will be `1`, but if you later make a change to the port but the
 version is still `0.2.2`, then `release` will now be `2`.
 
@@ -109,20 +109,19 @@ version is still `0.2.2`, then `release` will now be `2`.
 
 This variable defines the files that will be necessary for you to build your
 port.  This is a *string*, not a Bash array, this is for POSIX compatibility.
-Sources are separated by a space
-
-More often than not you'll use the `version` variable in the URL string so as to
-not have to type it out every time.  Using the `name` variable is not
-recommended, as some software don't use the package name in the URL, also it
-makes the url dirtier.
+Sources are separated by a space.
 
 Variables used inside the string should be enclosed around `${}` for clarity and
 safety.  Do not use `$var`, use `${var}`.
 
-### `gitsrc`
+The sources that `agno` supports at the moment are:
 
-This is not shown in the example Pkgfile, but if you're pulling from Git, please
-define a `gitsrc` variable which is a string to the Git repo.
+- `http(s)://` - It supports HTTP and HTTPS protocols (through `curl(1)`).
+- `ftp(s)://` - It supports FTP and FTPS protocols (through `curl(1)`).
+- `git://` - It supports the Git protocol.  Will clone as `$name-git`.
+- file - It supports normal files, for example `config.h`, do not use `file://`
+  as that is not supported.  The file will be searched for in the same dir as
+  the Pkgfile is in.
 
 ## Build process
 
@@ -132,13 +131,11 @@ install it.  It would look something like this (commented for your convenience):
 
 ``` sh
 agno_build() {
-	# when this is run you are dropped in the same dir with your downloaded files so
-	# here we're just cd'ing into the dir wit the source
+	# here we're just cd'ing into the dir with the source
 	cd $name-$version
 
-	# buildin
 	./build.sh
-	# prefix should _always_ be /usr and the mandir should be /usr/man
+	# PREFIX should be /usr and the MANPREFIX should be /usr/man
 	./configure --prefix=/usr \
 		--mandir=/usr/man
 }

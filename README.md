@@ -19,7 +19,7 @@ The dependencies may be different according to the OS as well.
 So what I decided to do was the have the ports reside under different dirs
 according to the OS they're tailored for.  But if for whatever reason a port
 that was made for another OS works on your OS, then a simple symlink can be
-created.
+created, the dependencies may just be a bit different.
 
 Whenever possible, preference will be granted to the package available in the
 OS's built-in package manager.  Which means that if the port becomes available
