@@ -1,0 +1,18 @@
+# THIS IS A TEMPLATE FILE, DELETE THIS LINE
+# Description:  Something
+# URL:          Something
+# Maintainer:   Something
+# Packager:     Something
+# OS Depends:   Something
+# agno Depends: Something
+
+name=
+version=
+release=1
+source=""
+
+agno_build() {
+}
+
+agno_install() {
+}

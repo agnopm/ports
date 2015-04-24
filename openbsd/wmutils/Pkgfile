@@ -1,0 +1,29 @@
+# Description:  Set of window manipulation tools (Git checkout)
+# URL:          https://github.com/wmutils/core
+# Maintainer:   Eduardo Lavaque <me@greduan.com>
+# Packager:     Eduardo Lavaque <me@greduan.com>
+# OS Depends:   git
+# agno Depends: libxcb
+
+name=wmutils
+version=git
+release=1
+source=""
+gitsrc="https://github.com/wmutils/core"
+
+agno_build() {
+	cd $AGNO_SOURCE
+
+	if cd $name; then
+		git fetch -q; git reset --hard origin/master
+	else
+		git clone $gitsrc $name
+		cd $name
+	fi
+
+	make
+}
+
+agno_install() {
+	make DESTDIR=$AGNO_DESTDIR PREFIX=/usr MANPREFIX=/usr/man install
+}

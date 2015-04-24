@@ -28,6 +28,9 @@ characters if it's possible, as in the description line shouldn't be longer than
 80 characters.  And whenever possible use the short description that the
 software is using, unless it's ridiculously long or it doesn't have one.
 
+If pulling from Git, `(Git checkout)` should be added to the end of the
+description.
+
 ### URL
 
 Again, pretty self explanatory.  Just go to the software's website (even if it's
@@ -91,7 +94,7 @@ going to install.
 If you are pulling the latest commit from Git to get your source, you can put
 `git` as the version.  If you are pulling from Git but using a tag or a commit
 hash to pull out a specific version of the software, use the version you are
-using as the `version` string.
+using as the `version` string.  Remember to add `git` to the list of OS Depends.
 
 ### `release`
 
@@ -114,7 +117,12 @@ recommended, as some software don't use the package name in the URL, also it
 makes the url dirtier.
 
 Variables used inside the string should be enclosed around `${}` for clarity and
-safety.  Do not use `$var` use `${var}`.
+safety.  Do not use `$var`, use `${var}`.
+
+### `gitsrc`
+
+This is not shown in the example Pkgfile, but if you're pulling from Git, please
+define a `gitsrc` variable which is a string to the Git repo.
 
 ## Build process
 

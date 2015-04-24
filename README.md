@@ -9,7 +9,7 @@ package manager.
 
 ## Project structure
 
-One of the goals of `agno` is to be OS agnostic (assuming your OS is POSIX
+One of the goals of `agnopm` is to be OS agnostic (assuming your OS is POSIX
 compatible).  But not all of the software required to build is POSIX compatible.
 For example, there is `make` and `gmake` in OpenBSD, `gmake` being GNU's `make`.
 Some software you can't compile without `gmake` but you can with `make`.
@@ -40,14 +40,17 @@ differences right away most likely.
 All Pkgfiles in this repo *will* follow a standard.  Anybody can contribute to
 this repo, so established rules are needed.
 
-For the actual information instead of just notices, go to the `CONTRIBUTING.md`
-file, found in this very same repo.
+Visit the `CONTRIBUTING.md` file, found in this very same repo, for the
+guidelines and explanation of the format.
+
+You will find a template Pkgfile in this repo (`./Pkgfile`), just to save you
+some tedious typing.
 
 ## License
 
 All of the ports are under the WTFPL.  There's really no point in putting a more
-restrictive license on simple scripts.  However, `agnopm` itself is under the
-ISC.
+restrictive license on simple scripts.  However, `agno` itself is under the
+ISC license.
 
     Copyright (c) 2015 Greduan <me@greduan.com>
     This work is free.  You can redistribute it and/or modify it under the
