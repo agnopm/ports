@@ -10,7 +10,7 @@ A port is divided into 3 sections:
 - **Variables** - Information about the package that `agno` needs to work
 - **Functions** - What runs your building and installing proceduers
 
-Throughout this document I'll be using the [port for abduco(1)][ab] as an
+Throughout this document I'll be using the [port for abduco(1)][ap] as an
 example.
 
 [ap]: https://github.com/agnopm/ports/blob/master/openbsd/abduco/Pkgfile
