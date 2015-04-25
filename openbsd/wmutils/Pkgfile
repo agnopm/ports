@@ -1,7 +1,7 @@
 # Description:  Set of window manipulation tools (Git checkout)
 # URL:          https://github.com/wmutils/core
-# Maintainer:   Eduardo Lavaque <me@greduan.com>
-# Packager:     Eduardo Lavaque <me@greduan.com>
+# Maintainer:   Eduardo Lavaque, me at greduan dot com
+# Packager:     Eduardo Lavaque, me at greduan dot com
 # OS Depends:   git
 # agno Depends: libxcb
 

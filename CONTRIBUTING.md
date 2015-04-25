@@ -12,10 +12,10 @@ interest to `agno`, but it is for the porter.  It goes like so:
 ``` sh
 # Description:  Short description of software
 # URL:          http://softwares.website.url/goes/here
-# Maintainer:   Some Guy <his@email.com>
-# Packager:     Some Guy <his@email.com>
-# OS Depends:   comma, separated, list, of, deps
-# agno Depends: comma, separated, list, of, deps
+# Maintainer:   Some Guy, his at email dot com
+# Packager:     Some Guy, his at email dot com
+# OS Depends:   space separated list of deps
+# agno Depends: space separated list of deps
 ```
 
 In that order.  Not one above the other or something and none are omitted no
@@ -37,27 +37,27 @@ Again, pretty self explanatory.  Just go to the software's website (even if it's
 GitHub) and just copy the URL and paste it here.
 
 If the software doesn't have a "website", so to speak, then just paste the URL
-of where one can find the source code.
+of where one can find the source code, e.g. GitHub.
 
 ### Maintainer and Packager
 
 These two are related but not the same.  The maintainer is he (or she) who is
 keeping up with updates and keeping the port up-to-date.  The packager is
-whoever originally made the port.
+whoever originally wrote the port.
 
 Both of these are to remain present, even if they are both the same.
 
-The format goes "First name Last name <some at email dot com>".  If you are
+The format goes "Firstname Lastname, some at email dot com".  If you are
 uncomfortable with sharing your first and last name you can use your username.
 But no mixing of real name and username, and it can't be only first name or only
-last name.
+last name, to avoid confusion on if it's your username or not.
 
 ### OS Depends and agno Depends
 
 `OS Depends` and `agno Depends` both tell the user what this piece of software
-needs in order to be built or to run correctly.  Dependencies are comma
-separated (for readability).  If there are no dependencies then they can just be
-left empty (or one of them empty) etc.
+needs in order to be built or to run correctly.  Dependencies are space
+separated (for scriptability).  If there are no dependencies then they can just
+be left empty (or one of them empty) etc.
 
 `OS Depends` is talking specifically about what the OS's package manager has
 available.
