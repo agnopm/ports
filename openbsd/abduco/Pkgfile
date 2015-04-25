@@ -19,5 +19,7 @@ agno_build() {
 }
 
 agno_install() {
+	cd $name-$version
+
 	make DESTDIR=$AGNO_DESTDIR PREFIX=/usr MANPREFIX=/usr/man install
 }
