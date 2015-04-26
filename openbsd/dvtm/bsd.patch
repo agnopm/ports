@@ -1,0 +1,21 @@
+Only in dvtm-0.14-bsd: config.h
+diff -c dvtm-0.14/config.mk dvtm-0.14-bsd/config.mk
+*** dvtm-0.14/config.mk	Thu Feb 19 10:51:23 2015
+--- dvtm-0.14-bsd/config.mk	Sat Apr 25 19:39:30 2015
+***************
+*** 11,17 ****
+  
+  INCS = -I.
+  LIBS = -lc -lutil -lncursesw
+! CPPFLAGS = -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_XOPEN_SOURCE_EXTENDED
+  CFLAGS += -std=c99 ${INCS} -DVERSION=\"${VERSION}\" -DNDEBUG ${CPPFLAGS}
+  LDFLAGS += ${LIBS}
+  
+--- 11,17 ----
+  
+  INCS = -I.
+  LIBS = -lc -lutil -lncursesw
+! CPPFLAGS = -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_XOPEN_SOURCE_EXTENDED -D_BSD_SOURCE
+  CFLAGS += -std=c99 ${INCS} -DVERSION=\"${VERSION}\" -DNDEBUG ${CPPFLAGS}
+  LDFLAGS += ${LIBS}
+  
