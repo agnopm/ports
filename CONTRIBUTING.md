@@ -81,8 +81,8 @@ Dependencies are space separated (for scriptability).  If there are no
 dependencies then they can just be left empty (or one of them empty) etc.
 
 "OS Depends" is talking specifically about what the OS's package manager has
-available.  This one is above "agno Depends" because of the preference of OS
-native packages.
+available.  This one is above "agno Depends" because of the preference of OS's
+native packages (for libraries).
 
 "agno Depends" is talking about dependencies that can't be satisfied by the OS's
 package manager, thus they are available as an `agnopm` port.

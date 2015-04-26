@@ -8,7 +8,7 @@ and then make a pull request. :)
 
 If a new version of software is available but the port is not up-to-date,
 contact the maintainer for him to update it or give you maintainer-ship over the
-port (if you like).
+port (if you both agree).
 
 ## Project structure
 
@@ -20,15 +20,18 @@ then a symlink will be made so as to avoid duplicated effort.
 
 ## OS's packages
 
-Preference will *always* be granted to the package available in the OS's
-built-in package manager.
+Depending on the kind of package, preference may be granted to the OS's or to
+`agnopm`'s package.
 
-Unless the differences are big enough for them to be two different packages, the
-`agnopm` port will be deleted if the OS's package manager offers the same
-package.
+For example, with libraries it is generally preferred to use the OS's version,
+because a new library version overriding the default OS's version may break some
+or many applications.  This of course is not something to worry about if the
+port offers a library not made available by the OS's package manager.
 
-In the case that they are different enough, the `agnopm` port's binaries have to
-be renamed so as to not conflict with the OS's binaries.
+But for applications, binaries, that sort of thing, one may prefer to use
+`agnopm`'s packages as they are more up-to-date, especially if one is using a
+stable OS, e.g. Debian or OpenBSD, whose's applications only change after the
+upgrade or very very slowly (unless one is following a more up-to-date branch).
 
 ## Pkgfile format
 
