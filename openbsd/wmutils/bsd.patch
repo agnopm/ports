@@ -1,0 +1,20 @@
+Common subdirectories: core/.git and core-bsd/.git
+diff -c core/config.mk core-bsd/config.mk
+*** core/config.mk	Tue Apr 28 12:55:53 2015
+--- core-bsd/config.mk	Tue Apr 28 12:57:03 2015
+***************
+*** 4,9 ****
+  CC      := cc
+  LD      := $(CC)
+  
+! CFLAGS  += -std=c99 -pedantic -Wall -Os
+! LDFLAGS += -lxcb
+  
+--- 4,9 ----
+  CC      := cc
+  LD      := $(CC)
+  
+! CFLAGS  += -std=c99 -pedantic -Wall -Os -I /usr/X11R6/include
+! LDFLAGS += -L /usr/X11R6/lib -l xcb
+  
+Common subdirectories: core/man and core-bsd/man

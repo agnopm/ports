@@ -3,15 +3,18 @@
 # Maintainer:   Eduardo Lavaque, me at greduan dot com
 # Packager:     Eduardo Lavaque, me at greduan dot com
 # OS Depends:   git
-# agno Depends: libxcb
+# agno Depends:
 
 name=wmutils
 version=git
 release=1
-source="git://github.com/wmutils/core"
+source="git://github.com/wmutils/core
+bsd.patch"
 
 agno_build() {
 	cd $name-git
+
+	patch -i $AGNO_WORK/bsd.patch
 
 	make
 }
