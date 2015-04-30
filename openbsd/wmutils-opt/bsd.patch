@@ -14,7 +14,7 @@ diff -c opt/config.mk opt-bsd/config.mk
   CC = cc
   LD = $(CC)
   
-! CFLAGS += -std=c99 -pedantic -Wall -Os -I /usr/X11R6/include
-! LDFLAGS += -L /usr/X11R6/lib -l xcb
+! CFLAGS += -std=c99 -pedantic -Wall -Os -I/usr/X11R6/include
+! LDFLAGS += -L/usr/X11R6/lib -lxcb
   
 Common subdirectories: opt/man and opt-bsd/man

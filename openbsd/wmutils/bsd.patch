@@ -14,7 +14,7 @@ diff -c core/config.mk core-bsd/config.mk
   CC      := cc
   LD      := $(CC)
   
-! CFLAGS  += -std=c99 -pedantic -Wall -Os -I /usr/X11R6/include
-! LDFLAGS += -L /usr/X11R6/lib -l xcb
+! CFLAGS  += -std=c99 -pedantic -Wall -Os -I/usr/X11R6/include
+! LDFLAGS += -L/usr/X11R6/lib -lxcb
   
 Common subdirectories: core/man and core-bsd/man
