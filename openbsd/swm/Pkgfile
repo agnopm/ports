@@ -1,0 +1,24 @@
+# Description:  simple window manager (Git checkout)
+# URL:          https://github.com/dcat/swm
+# Maintainer:   Eduardo Lavaque, me at greduan dot com
+# Packager:     Eduardo Lavaque, me at greduan dot com
+# OS Depends:   git, X11
+# agno Depends:
+
+name=swm
+version=git
+release=1
+source="git://github.com/dcat/swm"
+
+agno_build() {
+	cd $name-git
+
+	make
+}
+
+agno_install() {
+	cd $name-git
+
+	mkdir -p $AGNO_DESTDIR/usr/bin
+	install -m 755 swm $AGNO_DESTDIR/usr/bin/swm
+}
