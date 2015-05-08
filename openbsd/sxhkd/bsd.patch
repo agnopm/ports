@@ -1,0 +1,28 @@
+Common subdirectories: sxhkd/.git and sxhkd-bsd/.git
+diff -c sxhkd/Makefile sxhkd-bsd/Makefile
+*** sxhkd/Makefile	Thu May  7 20:05:56 2015
+--- sxhkd-bsd/Makefile	Thu May  7 20:06:45 2015
+***************
+*** 3,11 ****
+  
+  CC      ?= gcc
+  LIBS     = -lm -lxcb -lxcb-keysyms
+! CFLAGS  += -std=c99 -pedantic -Wall -Wextra -I$(PREFIX)/include
+  CFLAGS  += -D_POSIX_C_SOURCE=200112L -DVERSION=\"$(VERSION)\"
+! LDFLAGS += -L$(PREFIX)/lib
+  
+  PREFIX    ?= /usr/local
+  BINPREFIX  = $(PREFIX)/bin
+--- 3,11 ----
+  
+  CC      ?= gcc
+  LIBS     = -lm -lxcb -lxcb-keysyms
+! CFLAGS  += -std=c99 -pedantic -Wall -Wextra -I/usr/X11R6/include
+  CFLAGS  += -D_POSIX_C_SOURCE=200112L -DVERSION=\"$(VERSION)\"
+! LDFLAGS += -L/usr/X11R6/lib
+  
+  PREFIX    ?= /usr/local
+  BINPREFIX  = $(PREFIX)/bin
+Common subdirectories: sxhkd/contrib and sxhkd-bsd/contrib
+Common subdirectories: sxhkd/doc and sxhkd-bsd/doc
+Common subdirectories: sxhkd/examples and sxhkd-bsd/examples
