@@ -1,14 +1,14 @@
-# Description:  Simple X hotkey daemon (Git checkout)
-# URL:          https://github.com/baskerville/sxhkd
+# Description:  A tiling window manager (Git checkout)
+# URL:          https://github.com/baskerville/bspwm
 # Maintainer:   Eduardo Lavaque, me at greduan dot com
 # Packager:     Eduardo Lavaque, me at greduan dot com
 # OS Depends:   git, X11, gmake
 # agno Depends:
 
-name=sxhkd
+name=bspwm
 version=git
 release=1
-source="git://github.com/baskerville/sxhkd
+source="git://github.com/baskerville/bspwm
 bsd.patch"
 
 agno_build() {

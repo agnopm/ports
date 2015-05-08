@@ -1,0 +1,28 @@
+Common subdirectories: bspwm/.git and bspwm-bsd/.git
+diff -c bspwm/Makefile bspwm-bsd/Makefile
+*** bspwm/Makefile	Fri May  8 13:18:23 2015
+--- bspwm-bsd/Makefile	Fri May  8 13:19:16 2015
+***************
+*** 2,10 ****
+  
+  CC      ?= gcc
+  LIBS     = -lm -lxcb -lxcb-util -lxcb-icccm -lxcb-ewmh -lxcb-randr -lxcb-xinerama
+! CFLAGS  += -std=c99 -pedantic -Wall -Wextra -I$(PREFIX)/include
+  CFLAGS  += -D_POSIX_C_SOURCE=200112L -DVERSION=\"$(VERSION)\"
+! LDFLAGS += -L$(PREFIX)/lib
+  
+  PREFIX   ?= /usr/local
+  BINPREFIX = $(PREFIX)/bin
+--- 2,10 ----
+  
+  CC      ?= gcc
+  LIBS     = -lm -lxcb -lxcb-util -lxcb-icccm -lxcb-ewmh -lxcb-randr -lxcb-xinerama
+! CFLAGS  += -std=c99 -pedantic -Wall -Wextra -I/usr/X11R6/include
+  CFLAGS  += -D_POSIX_C_SOURCE=200112L -DVERSION=\"$(VERSION)\"
+! LDFLAGS += -L/usr/X11R6/lib
+  
+  PREFIX   ?= /usr/local
+  BINPREFIX = $(PREFIX)/bin
+Common subdirectories: bspwm/contrib and bspwm-bsd/contrib
+Common subdirectories: bspwm/doc and bspwm-bsd/doc
+Common subdirectories: bspwm/examples and bspwm-bsd/examples
