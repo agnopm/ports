@@ -1,0 +1,20 @@
+# Description:  quick access to files and directories for POSIX shells
+# URL:          https://github.com/clvv/fasd
+# Maintainer:   Eduardo Lavaque, me at greduan dot com
+# Packager:     Eduardo Lavaque, me at greduan dot com
+# OS Depends:
+# agno Depends:
+
+name=fasd
+version=git
+release=1
+source="git://github.com/clvv/fasd.git"
+
+agno_build() {
+}
+
+agno_install() {
+	cd $name-git
+
+	make DESTDIR=$AGNO_DESTDIR PREFIX=/usr MANDIR=/usr/man install
+}
